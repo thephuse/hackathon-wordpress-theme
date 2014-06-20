@@ -309,8 +309,8 @@ while ( have_posts() ) : the_post();
   if(is_subpage()) {
     $id = is_subpage();
   }
-  $showsubheader = is_page('about') || is_subpage() == getIdViaSlug('about') ||
-                   is_page('interest') || is_subpage() == getIdViaSlug('interest');
+  $children = get_pages('child_of='.$id);
+  $showsubheader = is_page()  && (count($children) > 0 || is_subpage());
   if ($showsubheader) {
     echo '<div class="page-menu-wrap">';
     $args = array(
