@@ -456,7 +456,7 @@ img.aligncenter {
 
 /* @group Buttons
 ----------------------------------------------- */
-.btn, #respond input[type="submit"] {
+.btn, div.wpcf7 input[type="submit"], #respond input[type="submit"] {
   background: #0a83c5;
   border: 0;
   border-radius: 3px;
@@ -469,13 +469,13 @@ img.aligncenter {
   text-align: center;
   text-decoration: none;
   vertical-align: middle; }
-  .btn:visited, #respond input[type="submit"]:visited {
+  .btn:visited, div.wpcf7 input[type="submit"]:visited, #respond input[type="submit"]:visited {
     color: #fff; }
-  .btn:hover, #respond input[type="submit"]:hover {
+  .btn:hover, div.wpcf7 input[type="submit"]:hover, #respond input[type="submit"]:hover {
     background: #0970a8;
     color: #fff;
     text-decoration: none; }
-  .btn:focus, #respond input[type="submit"]:focus {
+  .btn:focus, div.wpcf7 input[type="submit"]:focus, #respond input[type="submit"]:focus {
     background: #0970a8;
     outline: none; }
 
@@ -1180,6 +1180,17 @@ input.error, textarea.error {
 
 div.wpcf7 {
   margin-bottom: 80px; }
+  div.wpcf7 input[type="text"],
+  div.wpcf7 input[type="password"],
+  div.wpcf7 input[type="email"],
+  div.wpcf7 input[type="tel"],
+  div.wpcf7 input[type="date"],
+  div.wpcf7 input[type="number"],
+  div.wpcf7 input[type="search"],
+  div.wpcf7 input[type="url"],
+  div.wpcf7 textarea,
+  div.wpcf7 select {
+    width: 100%; }
   div.wpcf7 span.wpcf7-not-valid-tip {
     color: #d11f27;
     font-size: 12px;

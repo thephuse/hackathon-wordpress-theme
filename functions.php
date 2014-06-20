@@ -112,6 +112,11 @@ if (function_exists('register_sidebar')) {
     'before_widget' => '<div id="%1$s" class="widget %2$s">',
     'after_widget' => '</div>'
   ));
+  register_sidebar( array(
+    'name' => 'Footer Content',
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget' => '</div>'
+  ));
 }
 
 //change auto excerpt cut-off text
