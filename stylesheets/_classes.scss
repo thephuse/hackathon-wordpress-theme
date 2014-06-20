@@ -1,0 +1,627 @@
+/* @group Helpers & WP Classes
+----------------------------------------------- */
+.cf {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+  }
+  &:after {
+    clear: both;
+  }
+}
+.hide {
+  display: none !important;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.half {
+  width: 50%;
+  &.left {
+    padding-right: 2%;
+  }
+  &.right {
+    padding-left: 2%;
+  }
+}
+.third {
+  width: 33.333%;
+}
+.middle {
+  float: left;
+}
+.middle,
+.center-content {
+  text-align: center;
+}
+.sixty {
+  width: (560px/$sitewidth)*100%;
+}
+.forty {
+  width: (390px/$sitewidth)*100%;
+}
+
+.alignright {
+  float: right;
+  margin: 0 0 20px 20px;
+}
+.alignleft {
+  float: left;
+  margin: 0 20px 20px 0;
+}
+img.aligncenter {
+  display: block;
+  margin: 0 auto;
+}
+.wp-caption-text {
+  font-size: 12px;
+  font-style: italic;
+  color: $textlightcolor;
+  margin: 10px auto 0 auto;
+  text-align: center;
+}
+.attrib {
+  font-size: 12px;
+  font-style: italic;
+  color: $textlightcolor;
+}
+
+
+/* @group Buttons
+----------------------------------------------- */
+.btn {
+  @extend %bodystack;
+  background: $brandcolor;
+  border: 0;
+  border-radius: 3px;
+  color: #fff;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 1;
+  padding: 9px 15px;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  &:visited {
+    color: #fff;
+  }
+  &:hover {
+    background: darken($brandcolor,6%);
+    color: #fff;
+    text-decoration: none;
+  }
+  &:focus {
+    background: darken($brandcolor,6%);
+    outline: none;
+  }
+}
+.btn-primary {
+  background: $brandaccent;
+  &:hover,
+  &:focus {
+    background: darken($brandaccent,6%);
+  }
+}
+.btn-clr {
+  background: #fff;
+  border: 1px solid $bordercolor;
+  color: $textcolor;
+  padding: 8px 15px;
+  &:visited {
+    color: $textcolor;
+  }
+  &:hover,
+  &:focus {
+    border-color: $darkbordercolor;
+    background: #fff;
+    color: $textboldcolor;
+  }
+}
+.tweet-link {
+  background: #54abed;
+  border-radius: 3px;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 4px 12px;
+  white-space: nowrap;
+  vertical-align: middle;
+  &:visited {
+    color: #fff;
+  }
+  &:hover {
+    background: darken(#54abed,6%);
+    color: #fff;
+  }
+}
+
+
+/* @group Icons
+----------------------------------------------- */
+.ico {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  text-align: left;
+  text-indent: -999em;
+  overflow: hidden;
+  vertical-align: middle;
+}
+.ico-toggle {
+  background: url(images/ico-toggle.png) no-repeat center;
+  width: 24px;
+}
+.ico-tw,
+.ico-fb,
+.ico-gp,
+.ico-flickr {
+  border-radius: 3px;
+}
+.ico-tw {
+  background: #54abed url(images/ico-tw.png) no-repeat center;
+  &:hover {
+    background-color: darken(#54abed,6%);
+  }
+}
+.ico-fb {
+  background: #3b5998 url(images/ico-fb.png) no-repeat center;
+  &:hover {
+    background-color: darken(#3b5998,6%);
+  }
+}
+.ico-gp {
+  background: #df4f3d url(images/ico-gp.png) no-repeat center;
+  &:hover {
+    background-color: darken(#df4f3d,6%);
+  }
+}
+.ico-flickr {
+  background: #ff0084 url(images/ico-flickr.png) no-repeat center;
+  &:hover {
+    background-color: darken(#ff0084,6%);
+  }
+}
+.ico-twbird {
+  background: url(images/ico-tw.png) no-repeat center;
+  width: 17px;
+  height: 14px;
+}
+
+
+/* @group Lists
+----------------------------------------------- */
+.box-intro {
+  width: 22%;
+  float: left;
+}
+.box-list {
+  @extend %clean;
+  float: left;
+  font-size: 0;
+  width: 78%;
+  li {
+    @extend %boxstyle;
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 5.1679%;
+    padding: 0 20px 60px 20px;
+    min-height: 396px;
+    width: 28.165%;
+    vertical-align: top;
+    position: relative;
+  }
+  .thumb {
+    display: block;
+    margin: 0 -20px;
+    img {
+      display: block;
+      border-radius: 3px 3px 0 0;
+    }
+  }
+  h4 {
+    margin: 20px 0 12px;
+    strong {
+      font-weight: normal;
+    }
+    a span {
+      color: $textlightcolor;
+      display: block;
+      font-size: 12px;
+      margin: 5px 0;
+    }
+    .cut {
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    &:after {
+      content: '';
+      background: $bordercolor;
+      display: block;
+      width: 30px;
+      height: 1px;
+      margin-top: 15px;
+    }
+  }
+  .btn {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+  }
+  &.full {
+    width: 104.024194%;
+    padding: 0;
+    margin: 0 -1.9569%;
+    li {
+      width: 21.2%;
+      margin: 0 1.85% 40px;
+    }
+  }
+  p {
+    margin-top: 0;
+  }
+}
+
+.avatars {
+  @extend %clean;
+  @extend %accentstack;
+  font-size: 0;
+  margin: 0 -20px 40px;
+  text-align: center;
+  text-transform: uppercase;
+  li {
+    display: inline-block;
+    margin-bottom: 40px;
+    padding: 0 20px;
+    position: relative;
+    vertical-align: top;
+    > a {
+      background: $bordercolor;
+      color: $brandaccent;
+      display: block;
+    }
+  }
+  img,
+  strong {
+    display: block;
+  }
+  strong {
+    color: $brandcolor;
+    line-height: 1.3;
+  }
+  .info-wrap {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    &:before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      width: 0;
+      height: 100%;
+      margin-right: -0.4em;
+    }
+  }
+  .info {
+    display: inline-block;
+    opacity: 0;
+    vertical-align: middle;
+  }
+  a:hover {
+    background: #fff;
+    img {
+      opacity: 0.1;
+    }
+    .info {
+      opacity: 1;
+    }
+  }
+}
+.avatars-large {
+  li {
+    width: 344px;
+    > a {
+      height: 200px;
+    }
+  }
+  .info {
+    font-size: 14px;
+  }
+  strong {
+    font-size: 18px;
+  }
+}
+.avatars-medium {
+  li {
+    width: 172px;
+    > a {
+      height: 132px;
+    }
+  }
+  .info {
+    font-size: 11px;
+  }
+  strong {
+    font-size: 16px;
+  }
+}
+.avatars-small {
+  margin: 0 -6px 0 -5px;
+  text-align: left;
+  li {
+    width: 59px;
+    padding: 0 6px 11px 5px;
+  }
+  a {
+    width: 48px;
+    height: 48px;
+  }
+  a:hover img {
+    opacity: 0.5;
+  }
+}
+
+.timeline {
+  @extend %clean;
+  float: left;
+  position: relative;
+  width: 100%;
+  &:before {
+    content: '';
+    background: #d6d5d6;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    bottom: 0;
+    margin-left: -1px;
+    width: 2px;
+  }
+  .bubble {
+    @extend %boxstyle;
+    @extend %accentstack;
+    float: right;
+    font-size: 14px;
+    max-width: 345px;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    &:before {
+      content: '';
+      @include triangle($bordercolor, 10px, 16px, $direction: "right");
+      position: absolute;
+      right: -10px;
+      top: 5px;
+    }
+    &:after {
+      content: '';
+      @include triangle(#fff, 10px, 14px, $direction: "right");
+      position: absolute;
+      right: -8px;
+      top: 5px;
+    }
+  }
+  .meta {
+    color: $textlightcolor;
+    margin-bottom: 0;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  li {
+    clear: both;
+    float: left;
+    padding: 0 50px 0 0;
+    position: relative;
+    width: 50%;
+    &:before {
+      content: '';
+      background: #dcdde0;
+      border: 3px solid #fff;
+      border-radius: 50%;
+      display: block;
+      width: 26px;
+      height: 26px;
+      margin-top: -3px;
+      position: absolute;
+      top: 0;
+      right: -16px;
+    }
+  }
+  li:nth-child(2n) {
+    float: right;
+    padding: 0 0 0 50px;
+    &:before {
+      right: auto;
+      left: -16px;
+    }
+    .bubble {
+      float: left;
+    }
+    .bubble:before {
+      @include triangle($bordercolor, 10px, 16px, $direction: "left");
+      right: auto;
+      left: -10px
+    }
+    .bubble:after {
+      @include triangle(#fff, 10px, 14px, $direction: "left");
+      right: auto;
+      left: -8px
+    }
+  }
+  li + li {
+    margin-top: -10px;
+  }
+  li.more-bar {
+    width: 100%;
+    margin: 0;
+    padding: 40px 0 0;
+    text-align: center;
+    &:before {
+      display: none;
+    }
+  }
+}
+.alternate .timeline { //lol
+  li:before {
+    border-color: #f9f8f8;
+  }
+}
+
+
+/* @group Other Classes
+----------------------------------------------- */
+.group { //in .sidebar on events etc, no widget box
+  margin-bottom: 40px;
+  h3 {
+    color: $textlightcolor;
+    font-size: 12px;
+    margin: 0 0 1em;
+  }
+}
+.tags { //div with links in it.
+  a {
+    background: #a8aab1;
+    border-radius: 3px;
+    color: #fff;
+    display: inline-block;
+    font-size: 13px;
+    margin: 0 6px 8px 0;
+    padding: 3px 8px;
+    &:visited {
+      color: #fff;
+    }
+    &:hover {
+      background: $brandcolor;
+      color: #fff;
+    }
+  }
+}
+.sidebar .widget.tags {
+  padding-bottom: 12px;
+  a {
+    color: #fff;
+    background: $brandcolor;
+    &:visited {
+      color: #fff;
+    }
+    &:hover {
+      background: $brandaccent;
+      color: #fff;
+    }
+  }
+}
+.alternate {
+  background: #f9f8f8;
+  border: 1px solid $bordercolor;
+  border-width: 1px 0;
+}
+
+
+/* @group Tooltips
+----------------------------------------------- */
+/* TipTip CSS - Version 1.2 (edited)
+*/
+#tiptip_holder {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+}
+
+#tiptip_holder.tip_top {
+  padding-bottom: 5px;
+}
+
+#tiptip_holder.tip_bottom {
+  padding-top: 5px;
+}
+
+#tiptip_holder.tip_right {
+  padding-left: 5px;
+  padding-right: 20px;
+}
+
+#tiptip_holder.tip_left {
+  padding-right: 5px;
+}
+
+#tiptip_content {
+  @extend %accentstack;
+  border: 1px solid $bordercolor;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px rgba(#000,0.06);
+  color: $brandaccent;
+  font-size: 11px;
+  padding: 16px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  strong {
+    color: $brandcolor;
+    display: block;
+    font-size: 16px;
+  }
+}
+
+#tiptip_arrow, #tiptip_arrow_inner {
+  position: absolute;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 6px;
+  height: 0;
+  width: 0;
+}
+
+#tiptip_holder.tip_top #tiptip_arrow {
+  border-top-color: $bordercolor;
+}
+
+#tiptip_holder.tip_bottom #tiptip_arrow {
+  border-bottom-color: $bordercolor;
+}
+
+#tiptip_holder.tip_right #tiptip_arrow {
+  border-right-color: $bordercolor;
+}
+
+#tiptip_holder.tip_left #tiptip_arrow {
+  border-left-color: $bordercolor;
+}
+
+#tiptip_holder.tip_top #tiptip_arrow_inner {
+  margin-top: -7px;
+  margin-left: -6px;
+  border-top-color: #fff;
+}
+
+#tiptip_holder.tip_bottom #tiptip_arrow_inner {
+  margin-top: -5px;
+  margin-left: -6px;
+  border-bottom-color: #fff;
+}
+
+#tiptip_holder.tip_right #tiptip_arrow_inner {
+  margin-top: -6px;
+  margin-left: -5px;
+  border-right-color: #fff;
+}
+
+#tiptip_holder.tip_left #tiptip_arrow_inner {
+  margin-top: -6px;
+  margin-left: -7px;
+  border-left-color: #fff;
+}
+

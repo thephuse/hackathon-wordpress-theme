@@ -1,0 +1,97 @@
+//variables, mixins and placeholders
+
+$brandcolor: #0a83c5; //blue
+$brandaccent: #d11f27; //red
+$brandnews: #a65a95; //purple
+$textcolor: #797680;
+$textboldcolor: #484353;
+$textlightcolor: #bcbabf;
+$bordercolor: #eaeaea;
+$darkbordercolor: #d5d5d5;
+$bgcolor: #f9f8f8;
+
+$sitewidth: 992px;
+$sitemedwidth: 728px;
+
+@mixin linear($start, $end) {
+  background: -moz-linear-gradient(top, $start 0%, $end 100%);
+  background: -webkit-linear-gradient(top, $start 0%, $end 100%);
+  background: -o-linear-gradient(top, $start 0%, $end 100%);
+  background: -ms-linear-gradient(top, $start 0%, $end 100%);
+  background: linear-gradient(to bottom, $start 0%, $end 100%);
+}
+
+// https://github.com/thephuse/snippets/blob/master/sass_mixins/triangle.scss
+@mixin triangle($color, $height, $width, $direction: "up") {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  @if $direction == "up" {
+    border-width: 0 $width/2 $height $width/2;
+    border-color: transparent transparent $color transparent;
+  } @else if $direction == "down" {
+    border-width: $height $width/2 0 $width/2;
+    border-color: $color transparent transparent transparent;
+  } @else if $direction == "right" {
+    border-width: $width/2 0 $width/2 $height;
+    border-color: transparent transparent transparent $color;
+  } @else if $direction == "left" {
+    border-width: $width/2 $height $width/2 0;
+    border-color: transparent $color transparent transparent;
+  }
+}
+
+
+/* @group Base styles
+----------------------------------------------- */
+%bodystack {
+  font-family: proxima-nova, 'Proxima Nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+%accentstack {
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+%clean {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+%ir {
+  display: inline-block;
+  text-align: left;
+  text-indent: -999em;
+  overflow: hidden;
+}
+
+%boxstyle {
+  background: #fff;
+  border: 1px solid #e9e9e9;
+  border-top-color: #f2f2f2;
+  border-bottom-color: #d7d7d7;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(#000,0.04);
+}
+
+
+/* @group Colour Themes
+----------------------------------------------- */
+%purpletheme {
+  h2 strong,
+  h3 strong,
+  a:not(.btn),
+  a:not(.btn):visited {
+    color: $brandnews;
+  }
+  a:not(.btn):hover {
+    color: $textcolor;
+  }
+  .btn:not(.btn-clr) {
+    background: $brandnews;
+    &:hover,
+    &:focus {
+      background: darken($brandnews,6%);
+    }
+  }
+}
+

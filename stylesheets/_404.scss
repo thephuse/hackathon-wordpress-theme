@@ -1,0 +1,274 @@
+/* Terminal from: http://cssdeck.com/labs/pure-css-osx-terminal */
+
+.error404 {
+  background: #d2dfe6 url(images/404bg.jpg);
+  background-size: cover;
+  color: #444;
+  line-height: 1.5em;
+
+  .content404 {
+    width: 90%;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    margin: auto;
+    max-width: 480px;
+    height: 480px;
+  }
+
+  /* Console Window */
+  .window {
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 10px 30px 5px rgba(#000, 0.35);
+    overflow: hidden; 
+    height: 330px;
+  }
+
+  /* Navigation */
+  .content404 .navigation {
+    margin-top: 55px;
+    text-align: center;
+    color: rgba(#fff, 0.6);
+    font-size: 12px;
+    font-weight: bold;
+    a {
+      color: rgba(#fff, 0.6);
+      padding: 0 15px;
+      white-space: nowrap;
+      &:hover { 
+        color: #fff;
+      }
+    }
+  }
+
+  /* Top Bar */
+  .topbar {
+    width: 100%;
+    height: 21px;
+    font-size: 16px;
+    font-family: "Myriad Pro", "Helvetica Neue", sans-serif;
+    font-weight: 600;
+    text-shadow: 0px 1px 0px rgba(#fff, 0.25);
+    box-shadow: 0 1px 0 rgba(#000, 0.5);
+    ul li {
+      float: left; 
+      padding: 0 10px;
+      height: 21px;
+      line-height: 24px;
+      &:active {
+        background-image: -webkit-gradient(linear, left bottom, left top, color-stop(1, #4a82ff), color-stop(0, #0052fc));
+        color: #fff;
+        text-shadow: none;
+      }
+    }
+  }
+  .toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    width: 100%;
+    height: 25px;
+    background: grey;
+    border-radius: 5px 5px 0 0;
+
+    background: #cfcfcf; /* Old browsers */
+    background: -moz-linear-gradient(top,  #cfcfcf 0%, #a8a8a8 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cfcfcf), color-stop(100%,#a8a8a8)); /* Chrome, Safari4+ */
+    background: -webkit-linear-gradient(top,  #cfcfcf 0%,#a8a8a8 100%); /* Chrome10+, Safari5.1+ */
+    background: -o-linear-gradient(top,  #cfcfcf 0%,#a8a8a8 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #cfcfcf 0%,#a8a8a8 100%); /* IE10+ */
+    background: linear-gradient(top,  #cfcfcf 0%,#a8a8a8 100%); /* W3C */
+    
+    box-shadow: 0px 1px 0px rgba(#fff, 0.5) inset, 0px 1px 0px #6F6F6F;
+    .top {
+      float: left; 
+      position: relative;
+      width: 100%; 
+      height: 23px;
+    }
+    .bottom {
+      float: left; 
+      width: 100%; 
+      height: 30px;
+    }
+    
+  }
+
+  /* Traffic Lights */
+  .toolbar .lights {
+    float: left;
+    position: relative;
+    top: 6px;
+    left: 7px; 
+  }
+  .light {
+    float: left;
+    width: 12px;
+    height: 12px;
+    border-radius: 14px;
+    box-shadow: 0px 1px 0px rgba(#fff, 0.5), 0px 0px 3px #000 inset;
+    overflow: hidden;
+  }
+  .lights:hover .glyph {
+    cursor: default;
+    
+  }
+  .light .shine {
+     width: 4px;
+     height: 3px;
+     border-radius: 10px;
+     /*background-image: -webkit-gradient(radial, center center, 0, center center, 3, from(rgba(#fff, 1)), to(rgba(#fff, 0)));*/
+     background: -moz-radial-gradient(center, ellipse cover,  rgba(#fff, 1) 0%, rgba(#fff, 0) 100%); /* FF3.6+ */  
+     background-image: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(#fff, 1)), color-stop(100%, rgba(#fff, 0))); /* Chrome, Safari4+ */
+     background: -webkit-radial-gradient(center, ellipse cover,  rgba(#fff, 1) 0%, rgba(#fff, 0) 100%); /* Chrome10+, Safari5.1+ */
+     background: -o-radial-gradient(center, ellipse cover,  rgba(#fff, 1) 0%, rgba(#fff, 0) 100%); /* Opera 12+ */
+     background: -ms-radial-gradient(center, ellipse cover,  rgba(#fff, 1) 0%, rgba(#fff, 0) 100%); /* IE10+ */
+     background: radial-gradient(center, ellipse cover,  rgba(#fff, 1) 0%, rgba(#fff, 0) 100%); /* W3C */
+     
+  }
+  .light .glow {
+    width: 14px;
+    height: 8px; 
+    background-image: -webkit-gradient(radial, center bottom, 0, center center, 5, from(rgba(#fff, 0.75)), to(rgba(#fff, 0)));
+    background: 0px 0px -moz-radial-gradient(bottom, cover,  rgba(#fff, 0.70) 0%, rgba(#fff, 0) 80%); /* FF3.6+ */
+  }
+  .glyph {
+    position: relative;
+    z-index: 50;
+    opacity: 0;
+  }
+  .shine {  
+    position: relative;
+    top: -23px;
+    left: 5px;  
+  }
+  .glow {
+    position: relative;
+    top: -22px;
+  }
+
+  .red {
+     @include linear(#f41b16, #fc7471);
+  }
+  .red:active {
+     @include linear(#972f2e, #fc7471);
+  }
+  .yellow {
+    @include linear(#f4a316, #fcc371);
+    margin: 0px 7px;
+  }
+  .yellow:active {
+    @include linear(#ae4f1e, #fcc371); 
+  }
+  .green {
+    @include linear(#4cae2e, #dafc71);
+  }
+  .green:active {
+    @include linear(#48752b, #dafc71);
+  }
+
+  /* Horrible to do this for firefox */
+  @-moz-document url-prefix() {
+    
+    .red .glyph {
+      position: relative;
+      top: -4px;
+    }  
+    .yellow .glyph {
+      top: -4px;
+      left: 3px;
+    }
+    
+    .green .glyph {
+      position: relative;
+      top: -4px;
+    }
+    
+  }
+
+  /* Title */
+  .title {
+    float: left; 
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 13px; 
+    text-shadow: 0px 1px 0px rgba(#fff, 0.5);
+    line-height: 20px; 
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  }
+
+
+  /* Console body */
+  .consolebody {
+    margin-top: 25px;
+    height: 305px;
+    font-family: 'Andale Mono', Consolas, monospace; line-height: 1em;
+    font-size: 13px;
+    float: left;
+    width: 100%;
+    height: 100%;
+    min-height: 130px;
+    background:#fff;
+    padding: 10px;
+    line-height: 1.5em;
+  }
+  
+  .current:focus + .cursor {
+    opacity: 1;
+  }
+  .cursor {
+    opacity: 0;
+    background: #929292;
+
+    display: inline-block;
+    width: 9px;
+    height: 16px;
+    margin-bottom:-3px;
+    -webkit-animation: blink 2s linear 0s infinite;
+    -moz-animation: blink 2s linear 0s infinite;
+    -ms-animation: blink 2s linear 0s infinite;
+    -o-animation: blink 2s linear 0s infinite;
+  }
+
+  .input {
+    word-break: break-all;
+    color : transparent;
+    text-shadow : 0 0 0 #3A3742;
+
+    &:focus {
+      outline: none;
+
+    }
+  }
+}
+
+@-webkit-keyframes blink {
+  0%   { background: #929292 }
+  100% { background: transparent }
+}
+ 
+@-moz-keyframes blink {
+  0%   { background: #929292 }
+  100% { background: transparent }
+}
+ 
+@-ms-keyframes blink {
+  0%   { background: #929292 }
+  100% { background: transparent }
+}
+ 
+@-o-keyframes blink {
+  0%   { background: #929292 }
+  100% { background: transparent }
+}
+
+@media screen and (max-width: 550px) {
+  .error404 .title {
+    padding-left: 60px;
+  }
+}

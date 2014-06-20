@@ -1,0 +1,368 @@
+::-webkit-input-placeholder {
+   color: $textlightcolor;
+}
+:-moz-placeholder { /* Firefox 18- */
+   color: $textlightcolor;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+   color: $textlightcolor;
+}
+:-ms-input-placeholder {
+   color: $textlightcolor;
+}
+
+label {
+  color: $textboldcolor;
+}
+input {
+  @extend %bodystack;
+  -webkit-font-smoothing: antialiased;
+}
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+input[type="search"],
+textarea,
+select {
+  border: 1px solid $darkbordercolor;
+  border-radius: 3px;
+  padding: 9px 15px 10px 15px;
+  outline: none;
+  color: $textcolor;
+  margin: 0;
+  width: 210px;
+  max-width: 100%;
+  display: block;
+  margin-bottom: 20px;
+  background: #fff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+select {
+  width: 220px;
+  height: 42px;
+  padding: 8px 30px 8px 10px;
+  line-height: 1;
+  background: url(images/arrow-select.png) no-repeat;
+  background-position: right center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+  &:focus {
+    border-color: $brandcolor;
+  }
+}
+select::-ms-expand {
+    display: none;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+  border-color: $brandcolor;
+  color: #444;
+}
+textarea {
+  min-height: 60px; }
+input[type="checkbox"] {
+  display: inline; }
+
+// search inputs.
+input.search-input {
+  background-image: url(images/ico-search-sm.png);
+  background-repeat: no-repeat;
+  background-position: 100% center;
+  padding-right: 30px;
+}
+
+// selectbox, styled selects
+.selectbox {
+  position: relative;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  background: #fff;
+  border-radius: 3px;
+  max-width: 100%;
+  vertical-align: middle;
+ }
+.selectbox select {
+  z-index: 10;
+  position: relative;
+  border: none;
+  outline: none;
+  margin: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+ }
+ .selecttext {
+  z-index: 9;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  padding: 0.5em 0 0 15px;
+  height: 2em;
+  right: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+.select-arrow {
+  background: url(images/arrow-select.png) no-repeat center;
+  display: block;
+  width: 11px;
+  height: 7px;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  margin-top: -3px;
+}
+/* color */
+.selectbox {
+  border: 1px solid $darkbordercolor;
+  &.focused {
+    border-color: $brandcolor;
+  }
+}
+.selecttext {
+  color: $textcolor;
+  text-shadow: 0 1px 0 #fff;
+  font-size: 18px;
+}
+
+.form-row {
+  margin-bottom: 25px;
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  input[type="number"],
+  input[type="search"],
+  textarea,
+  .selectbox,
+  select {
+    width: 100%;
+    margin: 0;
+  }
+  label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 16px;
+    @extend %accentstack;
+    &.with-subtitle {
+      margin-bottom: 0;
+    }
+  }
+  &.submit {
+    text-align: right;
+    input[type="submit"] {
+      float: right;
+    }
+  }
+  &:after {
+    display: table;
+    content: "";
+    clear: both;
+  }
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  legend {
+    margin: 0;
+    @extend %accentstack;
+    width: 100%;
+  }
+}
+.label-subtitle {
+  font-size: 11px;
+  color: $textlightcolor;
+  margin-bottom: 10px;
+}
+#submit_project {
+  margin-top: 60px;
+}
+#no-team-members {
+  display: none;
+  @extend %boxstyle;
+  text-align: center;
+  font-size: 30px;
+  color: #ddd;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  p:last-of-type {
+    font-size: 14px;
+  }
+}
+.team-member-form-row {
+  @extend %boxstyle;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+  .form-row {
+    margin-bottom: 25px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .close {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+  }
+  .grid-half:nth-of-type(2n - 1) {
+    clear: none;
+  }
+  .form-row:after {
+    clear: none;
+  }
+  label {
+    margin-bottom: 10px;
+    line-height: 1;
+  }
+  .photo {
+    width: 100px;
+    height: 100px;
+    float: left;
+  }
+  .content {
+    margin-left: 120px;  
+    &:after {
+      display: table;
+      content: "";
+      clear: both;
+    }
+  }
+}
+#add-team-member {
+  font-size: 25px;
+  padding: 0px 5px;
+  line-height: 1;
+  float: right;
+}
+
+
+.alert {
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  padding: 5px 15px;
+  font-size: 0.9em;
+  text-align: center;
+  margin: 0 0 20px;
+  a {
+    color: rgba(#fff, 0.8);
+    border-bottom: 1px solid rgba(#fff, 0.6);
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+.alert-success {
+  background: #5DB655;
+}
+.alert-error {
+  background: $brandaccent;
+}
+
+label.error {
+  color: $brandaccent;
+  font-size: 0.7em;
+  margin: 6px 0 0;
+  .content & {
+    margin-bottom: 10px;
+  }
+}
+input.error, textarea.error {
+  border-color: $brandaccent;
+}
+
+// Contact form 7
+
+div.wpcf7 {
+  margin-bottom: 80px;
+  span.wpcf7-not-valid-tip {
+    color: $brandaccent;
+    font-size: 12px;
+    display: block;
+    margin: 5px 0 0;
+  }
+  
+  div.wpcf7-mail-sent-ok {
+    border: none;
+    background: #5DB655;
+    color: #fff;
+    border-radius: 4px;
+    padding: 5px 15px;
+    font-size: 0.9em;
+    text-align: center;
+    margin: 0;
+  }
+
+  div.wpcf7-validation-errors, div.wpcf7-spam-blocked, div.wpcf7-mail-sent-ng {
+    border: none;
+    background: $brandaccent;
+    color: #fff;
+    border-radius: 4px;
+    padding: 5px 15px;
+    font-size: 0.9em;
+    text-align: center;
+    margin: 0;
+  }
+  
+  span.wpcf7-form-control-wrap {
+    display: block !important;
+    opacity: 0.7;
+  }
+
+  img.ajax-loader {
+    margin-right: 10px;
+  }
+}
+
+// Google Docs
+#ss-form {
+  font-size: 16px;
+  line-height: 1.2;
+  p {
+    margin: 0;
+  }
+  .form-row label {
+    margin: 0;
+  }
+}
+.ss-choice-item {
+  list-style: none;
+}
+.ss-choice-label {
+  padding-left: 5px;
+  line-height: 1.8;
+}
+input.ss-q-short, .ss-q-long {
+  width: 100%;
+}
+.ss-q-title {
+  margin-bottom: 10px;
+}
+.ss-q-title {
+  color: $textboldcolor;
+  @extend %accentstack;
+}
