@@ -1,7 +1,7 @@
 Hackathon WordPress Theme
 =========================
 
-This WordPress theme was originally developed for [National Day of Civic Hacking 2014*(http://hackforchange.org/).
+This WordPress theme was originally developed for [National Day of Civic Hacking 2014](http://hackforchange.org/).
 
 
 The Homepage
@@ -99,16 +99,16 @@ Plugins
 -------
 
 ### Required:
-*Fluid Video Embeds* - If you want your videos to scale down mobile and not break the site.
-*Latest Tweets Widget* - If you want to use the latest tweets on the blog sidebar.
-*User Access Manager* - If you want to manage the permissions of various users.
+- *Fluid Video Embeds* - If you want your videos to scale down mobile and not break the site.
+- *Latest Tweets Widget* - If you want to use the latest tweets on the blog sidebar.
+- *User Access Manager* - If you want to manage the permissions of various users.
 
 ### Recommended:
-*Comment Form 7* - All elements stlyed and ready to go!
-*Disqus Comment System* - Normal Comments are styled, but Disqus looks better.
+- *Comment Form 7* - All elements stlyed and ready to go!
+- *Disqus Comment System* - Normal Comments are styled, but Disqus looks better.
 
 ### Nice to have:
-*All in One SEO Pack* - You need SEO!
+- *All in One SEO Pack* - You need SEO!
 
 
 
