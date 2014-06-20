@@ -19,6 +19,10 @@ function cust_add_scripts() {
   wp_register_script('respond', get_template_directory_uri().'/javascripts/libs/respond.min.js', false, null, false);
   wp_enqueue_script('respond');
 
+  if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+    wp_enqueue_script( 'comment-reply' );
+  }
+
   wp_register_script('timeago', get_template_directory_uri().'/javascripts/libs/timeago.js', array('jquery'), null, true);
   wp_enqueue_script('timeago');
   wp_register_script('md5', get_template_directory_uri().'/javascripts/libs/md5.js', array('jquery'), null, true);
@@ -34,6 +38,14 @@ function cust_add_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'cust_add_scripts' );
 
+
+  /*
+   * Switch default core markup for search form, comment form, and comments
+   * to output valid HTML5.
+   */
+  add_theme_support( 'html5', array(
+    'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
+  ) );
 
 // custom header image/logo support:
 $args = array(
