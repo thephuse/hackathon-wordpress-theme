@@ -2,6 +2,7 @@
 include('php/custom_widgets.php');
 include('php/locations.php');
 include('php/write_panels.php');
+include('php/acf-fields.php');
 
 function cust_add_scripts() {
   wp_enqueue_style('mapbox-styles', 'http' . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . '://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css', false, null);
