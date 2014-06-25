@@ -1,6 +1,7 @@
 <?php 
 define( 'ACF_LITE', true );
 include_once('advanced-custom-fields/acf.php');
+include_once('acf-repeater/acf-repeater.php');
 
 if(function_exists("register_field_group"))
 {
@@ -8,6 +9,28 @@ if(function_exists("register_field_group"))
 		'id' => 'acf_about',
 		'title' => 'About',
 		'fields' => array (
+			array (
+				'key' => 'field_53ab22bb95c57',
+				'label' => 'Sidebar Photos',
+				'name' => 'sidebar_photos',
+				'type' => 'repeater',
+				'sub_fields' => array (
+					array (
+						'key' => 'field_53ab22cb95c58',
+						'label' => 'Sidebar Photo',
+						'name' => 'sidebar_photo',
+						'type' => 'image',
+						'column_width' => '',
+						'save_format' => 'url',
+						'preview_size' => 'thumbnail',
+						'library' => 'all',
+					),
+				),
+				'row_min' => '',
+				'row_limit' => '',
+				'layout' => 'table',
+				'button_label' => 'Add Image',
+			),
 			array (
 				'key' => 'field_5350324dab631',
 				'label' => 'Section2 Image',

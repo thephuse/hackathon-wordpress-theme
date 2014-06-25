@@ -17,9 +17,10 @@ get_header();
         <?php the_content(); ?>
       </div>
       <div class="about-photos right forty">
-        <img src="<?php bloginfo('template_url'); ?>/images/about/about-1.jpg" alt="">
-        <img src="<?php bloginfo('template_url'); ?>/images/about/about-2.jpg" alt="">
-        <img src="<?php bloginfo('template_url'); ?>/images/about/about-3.jpg" alt="">
+        <?php $photos = get_field('sidebar_photos'); ?>
+        <?php if ($photos): while (has_sub_field('sidebar_photos')): ?>
+        <img src="<?php the_sub_field('sidebar_photo'); ?>" alt="">
+        <?php endwhile; endif; ?>
         <?php $flickr = mytheme_option('flickr'); ?>
         <?php if ($flickr): ?>
           <a href="<?php echo $flickr; ?>" class="btn">View more photos</a>

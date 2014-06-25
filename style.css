@@ -1596,7 +1596,8 @@ h4 {
 .container {
   margin: 0 auto;
   max-width: 992px;
-  width: 92%; }
+  width: 92%;
+  word-break: break-word; }
 
 main > section {
   padding: 80px 0; }
