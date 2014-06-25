@@ -62,7 +62,8 @@ if ('POST' == $_SERVER['REQUEST_METHOD'] &&
       $post_id = wp_insert_post($new_post, true);
 
       if (is_wp_error($post_id)) {
-        $result = 'Uh oh, looks like something went wrong on our end. Please email your project to <a href="mailto:hello@hackforchange.com">hello@hackforchange.com</a> and we will enter it for you!';
+        $contactemail = mytheme_option('contact-email');
+        $result = 'Uh oh, looks like something went wrong on our end. Please email your project to <a href="mailto:'.$contactemail.'">'.$contactemail.'</a> and we will enter it for you!';
       }
       else {
         // Add the rest of the fields

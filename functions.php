@@ -4,6 +4,7 @@ include('php/locations.php');
 include('php/write_panels.php');
 include('php/acf-fields.php');
 
+
 function cust_add_scripts() {
   wp_enqueue_style('mapbox-styles', 'http' . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . '://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css', false, null);
   wp_enqueue_style('fonts', 'http' . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . '://fonts.googleapis.com/css?family=Montserrat:400,700', false, '1.0');
@@ -39,13 +40,13 @@ function cust_add_scripts() {
 add_action( 'wp_enqueue_scripts', 'cust_add_scripts' );
 
 
-  /*
-   * Switch default core markup for search form, comment form, and comments
-   * to output valid HTML5.
-   */
-  add_theme_support( 'html5', array(
-    'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
-  ) );
+/*
+ * Switch default core markup for search form, comment form, and comments
+ * to output valid HTML5.
+ */
+add_theme_support( 'html5', array(
+  'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
+) );
 
 // custom header image/logo support:
 $args = array(
@@ -109,11 +110,6 @@ if (function_exists('register_sidebar')) {
   ));
   register_sidebar( array(
     'name' => 'Secondary Header Area',
-    'before_widget' => '<div id="%1$s" class="widget %2$s">',
-    'after_widget' => '</div>'
-  ));
-  register_sidebar( array(
-    'name' => 'Footer Content',
     'before_widget' => '<div id="%1$s" class="widget %2$s">',
     'after_widget' => '</div>'
   ));
@@ -592,4 +588,10 @@ add_filter('force_ssl', 'my_force_ssl', 10, 3);
 
 function make_clickable_links ($s) {
   return preg_replace('@(https?://([-\w\.]+[-\w])+(:\d+)?(/([\w/_\.#-]*(\?\S+)?[^\.\s])?)?)@', '<a href="$1" target="_blank">$1</a>', $s);
+}
+
+
+
+if ( file_exists( STYLESHEETPATH . '/class.my-theme-options.php' ) ) {
+  require_once( STYLESHEETPATH . '/class.my-theme-options.php' );
 }

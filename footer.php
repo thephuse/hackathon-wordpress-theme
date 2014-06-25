@@ -8,8 +8,11 @@
     <div class="middle third">
       <?php include('share.php'); ?>
     </div>
+    <?php $contactemail = mytheme_option('contact-email'); ?>
     <div class="right third">
-      <p><a href="mailto:hello@hackforchange.org"><img src="<?php bloginfo('template_url'); ?>/images/email.png"> hello@hackforchange.org</a></p>
+      <?php if ($contactemail): ?>
+      <p><a href="mailto:<?php echo $contactemail; ?>"><img src="<?php bloginfo('template_url'); ?>/images/email.png"> <?php echo $contactemail; ?></a></p>
+      <?php endif; ?>
     </div>
     <?php
       wp_nav_menu( array(

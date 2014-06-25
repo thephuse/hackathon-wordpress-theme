@@ -8,17 +8,6 @@ get_header();
 <?php if ( have_posts() ) : ?>
 <?php while ( have_posts() ) : the_post(); ?>
 
-<section class="home-hashtag">
-  <div class="container">
-    <?php $hashtag = get_field('hashtag'); ?>
-    <h2><?php echo $hashtag; ?></h2>
-    <div id="tagboard-embed"></div>
-      <script>var tagboardOptions = {tagboard:"hackforchange/173951", postCount: 10, mobilePostCount: 3};</script>
-      <script src="https://tagboard.com/public/js/embed.js"></script>
-  </div>
-</section>
-
-
 <?php
   /* ///////////////////////////////////////////// SEARCH EVENTS */
   include('part-search-events.php');
