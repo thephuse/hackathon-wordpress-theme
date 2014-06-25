@@ -3,25 +3,23 @@ Hackathon WordPress Theme
 
 This WordPress theme was originally developed for [National Day of Civic Hacking 2014](http://hackforchange.org/).
 
+The theme is meant for multi-location events, like National Day of Civic Hacking.
+
+Since this was not developed with the primary intention of being a theme, it is not very customizable. However, we're making it open source to encourage developers to reuse, extend, and customize the theme freely.
+
 
 The Homepage
 ------------
 
-### Before the Event
+The hero content on the "Before" Home Page includes a Latest Tweets widget (http://hackathontheme.localhost/wp-admin/plugins.php) that must be connected to your twitter account before the theme will work. (Settings > Twitter API).
+
+The hero also includes a full-width [Mapbox](https://www.mapbox.com/). Head over to the mapbox site and create your map, then use the Map ID on this page to add it as a backdrop to the header.
 
 
-
-### During the Event
-
-
-
-### After the Event
-
-
-
-Conent Pages
+Content Pages
 ------------
 
+The default template can be used for plain, single column pages. If you add sub-pages they will appear as a second navigation menu below the hero/title. To change the background image behind the title, use the *Featured Image*.
 
 Contact Form
 ------------
@@ -58,9 +56,13 @@ If you'd like to use a form layout similar to contact form used on the [Hack for
 Footer Information
 ------------------
 
+To add social icons and your contact email to the footer, edit your information under Appearance > Theme Options.
+
 
 Organizers
 ----------
+
+To give event organizers access to the main WordPress install, we used the [User Access Manager Plugin](http://wordpress.org/plugins/user-access-manager/). With this, you can add a new user role called "Organizer" and assign certain permissions to that type of user. Organizers on hackforchange.org could only add and edit their own events. All other functionality is hidden using the UAM plugin.
 
 
 Events
@@ -81,18 +83,10 @@ $location_city = array(
 );
 ```
 
-Challenges
-----------
+Submit a Project
+----------------
 
-
-Datasets
---------
-
-
-Projects
---------
-
-
+You can build a [Submit Page](http://hackforchange.org/submit/) for your projects using the "Submit Project" template. When users submit projects through this form they will be added as a Project custom post type and will be available in the WordPress backend for you to approve/deny.
 
 
 Plugins

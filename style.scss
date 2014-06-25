@@ -743,6 +743,7 @@ main > .container:first-child {
       display: inline-block;
       vertical-align: middle;
       margin: auto;
+      margin-top: 95px;
     }
     input[type="search"] {
       width: 470px;
@@ -3311,6 +3312,9 @@ svg .animate {
       width: 90%;
       background-size: 20px;
       padding-left: 30px;
+    }
+    .search-box .container {
+      margin-top: 60px;
     }
   }
   .jess3-microsite {

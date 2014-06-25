@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: After Event Homepage
+Template Name: Before Event Homepage
 */
 get_header();
 ?>
@@ -55,39 +55,6 @@ get_header();
   ?>
   </div>
 </section>
-
-<section id="featured_sponsors">
-  <div class="container cf">
-
-    <div class="featured-list">
-      <?php echo '<img src="' . get_bloginfo('template_url') . '/images/intel-featured_360.png" alt="" />' ?>
-      <p>
-        Check out Intel’s developer tools to speed your development!
-      </p>
-      <ul>
-        <li>The <a href="https://software.intel.com/en-us/html5/tools">Intel® XDK</a> is free a development tool for Windows, OSX and Linux that lets developers easily create web-based apps for phones, tablets, and PCs using HTML 5</li>
-        <li>The <a href="http://developer.mashery.com/">Mashery API Network</a> provides with access to over 50 Mashery-powered RESTful APIs using a single ID.</li>
-      </ul>
-      <a class="btn" href="http://hackforchange.org/intel-tools-for-civic-hackers/">Learn More</a>
-    </div>
-
-    <div class="featured-list">
-      <?php echo '<img src="' . get_bloginfo('template_url') . '/images/kf-featured_360.png" alt="" />' ?>
-      <p>
-        View challenges by the Knight Foundation to get started, including:
-      </p>
-      <ul>
-        <li><a href="http://hackforchange.org/challenges/networking-distributed-project-teams/">Networking Distributed Project Teams</a></li>
-        <li><a href="http://hackforchange.org/challenges/knight-challenge-career-hacking-tools/">Career Hacking Tools</a></li>
-        <li><a href="http://hackforchange.org/challenges/talent-ideation-challenge/">Talent Ideation Challenge</a></li>
-        <li><a href="http://hackforchange.org/challenges/self-employed-support-networks/">Self Employed Support Networks</a></li>
-      </ul>
-      <a class="btn" href="http://www.knightfoundation.org/">Learn More</a>
-    </div>
-
-  </div>
-</section>
-
 <?php
   /* ///////////////////////////////////////////// EVENTS */
   $show_events = get_field('show_events');
