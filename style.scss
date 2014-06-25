@@ -1413,9 +1413,10 @@ main > .container:first-child {
 
 .sidebar {
   font-size: 14px;
+  margin-bottom: 40px;
   .widget {
     @extend %boxstyle;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     padding: 20px;
     &:last-of-type {
       margin-bottom: 0;
@@ -1536,7 +1537,7 @@ main > .container:first-child {
 ----------------------------------------------- */
 .search-bar {
   padding: 0;
-  .search-input {
+  .search-input, .search-field {
     @extend %accentstack;
     background-color: $bgcolor;
     background-image: url(images/ico-search.png);

@@ -364,7 +364,7 @@ th {
 .btn, input, body {
   font-family: proxima-nova, 'Proxima Nova', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
-.avatars, .timeline .bubble, #tiptip_content, .form-row label, fieldset legend, .ss-q-title, h1, h2, h3, h4, .site-header, .site-header .search-input, .home-events .event-locations a, .page-menu, .pagination .posts-nav, .search-bar .search-input, .search-bar select, .search-bar input[type='submit'], .event-organizers, .data-list .meta, .report-nav, .report-people blockquote {
+.avatars, .timeline .bubble, #tiptip_content, .form-row label, fieldset legend, .ss-q-title, h1, h2, h3, h4, .site-header, .site-header .search-input, .home-events .event-locations a, .page-menu, .pagination .posts-nav, .search-bar .search-input, .search-bar .search-field, .search-bar select, .search-bar input[type='submit'], .event-organizers, .data-list .meta, .report-nav, .report-people blockquote {
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 .box-list, .avatars, .timeline, .site-header ul, .hero-content .latest-tweets ul, .home-events .event-locations, .special-page ul, .page-menu, .sidebar ul, .pagination .navigation ol, .event-organizers, .data-list li, .footer-menu ul {
@@ -993,11 +993,19 @@ textarea {
 input[type="checkbox"] {
   display: inline; }
 
-input.search-input {
+input.search-input, input.search-field {
   background-image: url(images/ico-search-sm.png);
   background-repeat: no-repeat;
   background-position: 100% center;
   padding-right: 30px; }
+
+.search-form .screen-reader-text {
+  display: none; }
+.search-form .search-submit {
+  display: none; }
+.search-form .search-field {
+  width: 100%;
+  margin-bottom: 0; }
 
 .selectbox {
   position: relative;
@@ -2636,9 +2644,10 @@ main > .container:first-child {
   color: #bcbabf; }
 
 .sidebar {
-  font-size: 14px; }
+  font-size: 14px;
+  margin-bottom: 40px; }
   .sidebar .widget {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     padding: 20px; }
     .sidebar .widget:last-of-type {
       margin-bottom: 0; }
@@ -2730,7 +2739,7 @@ main > .container:first-child {
 ----------------------------------------------- */
 .search-bar {
   padding: 0; }
-  .search-bar .search-input {
+  .search-bar .search-input, .search-bar .search-field {
     background-color: #f9f8f8;
     background-image: url(images/ico-search.png);
     background-position: 0 center;

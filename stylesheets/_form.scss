@@ -78,13 +78,24 @@ input[type="checkbox"] {
   display: inline; }
 
 // search inputs.
-input.search-input {
+input.search-input, input.search-field {
   background-image: url(images/ico-search-sm.png);
   background-repeat: no-repeat;
   background-position: 100% center;
   padding-right: 30px;
 }
-
+.search-form {
+  .screen-reader-text {
+    display: none;
+  }
+  .search-submit {
+    display: none;
+  }
+  .search-field {
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
 // selectbox, styled selects
 .selectbox {
   position: relative;

@@ -20,7 +20,10 @@ get_header();
         <img src="<?php bloginfo('template_url'); ?>/images/about/about-1.jpg" alt="">
         <img src="<?php bloginfo('template_url'); ?>/images/about/about-2.jpg" alt="">
         <img src="<?php bloginfo('template_url'); ?>/images/about/about-3.jpg" alt="">
-        <a href="https://www.flickr.com/groups/hackforchange/" class="btn">View more of last year's photos</a>
+        <?php $flickr = mytheme_option('flickr'); ?>
+        <?php if ($flickr): ?>
+          <a href="<?php echo $flickr; ?>" class="btn">View more photos</a>
+        <?php endif; ?>
       </div>
     </div>
     <?php if (!empty($section2_content) || !empty($section2_image)): ?>
