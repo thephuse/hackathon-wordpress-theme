@@ -13,6 +13,14 @@ The Homepage
 
 The homepage comes with two templates, the *before* event template and the *after* event template. The main difference is that the *before* event template has a large map as the hero background, whereas the *after* event template uses an image. Feel free to use each template in any situation - they are not constrained to be "before" or "after", we just happened to use them that way on hackforchange.org.
 
+Before Page:
+
+![Before Event Template](/examples/example-before-page.png?raw=true "Before Event Template")
+
+After Page:
+
+![After Event Template](/examples/example-after-page.png?raw=true "After Event Template")
+
 The hero content on the "Before" Home Page includes a Latest Tweets widget (http://hackathontheme.localhost/wp-admin/plugins.php) that must be connected to your twitter account before the theme will work. (Settings > Twitter API).
 
 The hero also includes a full-width [Mapbox](https://www.mapbox.com/). Head over to the mapbox site and create your map, then use the Map ID on this page to add it as a backdrop to the header.

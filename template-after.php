@@ -5,44 +5,6 @@ Template Name: After Event Homepage
 get_header();
 ?>
 
-<section class="event-counts">
-  <div class="container cf">
-    <?php 
-      function format_number($number) {
-          if($number >= 1000) {
-            $roundNum = round($number/1000, 0, PHP_ROUND_HALF_DOWN);
-            return $roundNum . "k";
-          }
-          else {
-              return $number;
-          }
-      }
-    ?>
-    <ul>
-      <li>
-        <h2 class="projects-title">123</h2>
-        <h3>Events</h3>
-      </li>
-      <li>
-        <h2 class="projects-title">103</h2>
-      <h3>Cities</h3>
-      </li>
-      <li>
-        <h2 class="projects-title"><?php $numberChallenges = wp_count_posts('challenge')->publish; echo format_number($numberChallenges); ?></h2> 
-        <h3>Challenges</h3>
-      </li>
-      <li>
-        <h2 class="projects-title"><?php $numberDatasets = wp_count_posts('data')->publish; echo format_number($numberDatasets); ?></h2>
-        <h3>Data Sets</h3>
-      </li>
-      <li>
-        <h2 class="projects-title">100+</h2>
-        <h3>Projects</h3>
-      </li>      
-    </ul>
-  </div>
-</section>
-
 
 <?php if ( have_posts() ) : ?>
 <?php while ( have_posts() ) : the_post(); ?>
