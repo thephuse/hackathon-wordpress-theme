@@ -15,11 +15,11 @@ The homepage comes with two templates, the *before* event template and the *afte
 
 Before Page:
 
-![Before Event Template](/examples/example-before-page.png?raw=true "Before Event Template")
+![Before Event Template](/examples/example-before-event.png?raw=true "Before Event Template")
 
 After Page:
 
-![After Event Template](/examples/example-after-page.png?raw=true "After Event Template")
+![After Event Template](/examples/example-after-event.png?raw=true "After Event Template")
 
 The hero content on the "Before" Home Page includes a Latest Tweets widget (http://hackathontheme.localhost/wp-admin/plugins.php) that must be connected to your twitter account before the theme will work. (Settings > Twitter API).
 
