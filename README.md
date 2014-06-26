@@ -11,9 +11,21 @@ Since this was not developed with the primary intention of being a theme, it is 
 The Homepage
 ------------
 
+The homepage comes with two templates, the *before* event template and the *after* event template. The main difference is that the *before* event template has a large map as the hero background, whereas the *after* event template uses an image. Feel free to use each template in any situation - they are not constrained to be "before" or "after", we just happened to use them that way on hackforchange.org.
+
 The hero content on the "Before" Home Page includes a Latest Tweets widget (http://hackathontheme.localhost/wp-admin/plugins.php) that must be connected to your twitter account before the theme will work. (Settings > Twitter API).
 
 The hero also includes a full-width [Mapbox](https://www.mapbox.com/). Head over to the mapbox site and create your map, then use the Map ID on this page to add it as a backdrop to the header.
+
+Menus
+-----
+
+There are 3 menus available with this theme:
+1) Main Menu (white bar at the top of every page)
+2) Secondary Menu (grey bar that appears above the main menu when you click the red hamburger icon in the main menu)
+3) Footer Menu (simple text links that will appear centered at the very bottom of the page)
+
+The events, challenges, datasets, and projects pages are generated automatically (e.g. `archive-event.php`). To add these pages to the navigation menu, simply add a custom link to `/events/`, `/challenges/`, etc.
 
 
 Content Pages

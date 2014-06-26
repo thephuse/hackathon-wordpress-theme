@@ -160,7 +160,7 @@ var mapFX = function () {
     e.preventDefault();
     if ($('.trigger-map').hasClass('top')){
       $('.hero-content, .search-box, .map-inner').fadeIn('fast');
-      $('.map-overlay').animate({
+      $(this).parent().find('.map-overlay').animate({
         'height' : '100%'
       },'fast');
       $('.trigger-map').removeClass('top').text('View Map').css({
@@ -169,7 +169,7 @@ var mapFX = function () {
       });
     } else {
       $('.hero-content, .search-box, .map-inner').fadeOut('fast');
-      $('.map-overlay').animate({
+      $(this).parent().find('.map-overlay').animate({
         'height' : 0
       },'fast');
       $('.trigger-map').addClass('top').text('Hide Map').animate({
